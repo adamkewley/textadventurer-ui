@@ -1,8 +1,7 @@
 # TextAdventurer UI
 
-[https://www.textadventurer.tk](https://www.textadventurer.tk)
-
-Basic frontend for [textadventurer-server](https://github.com/AdamK117/textadventurer-server).
+Frontend for
+[textadventurer-server](https://github.com/AdamK117/textadventurer-server).
 
 
 # Overview
@@ -15,8 +14,7 @@ as Apache or nginx.
 At runtime, the frontend javascript makes calls to a
 `textadventurer-server` hosted at the same address. All API calls are
 prepended with `api/`. Your webserver should be configured to forward
-all requests with a URI beginning with `api/` to a
-`textadventurer-server` instance.
+beginning with `api/` to a `textadventurer-server` instance.
 
 An example of this forarding in nginx:
 
