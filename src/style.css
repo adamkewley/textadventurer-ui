@@ -1,0 +1,118 @@
+* {
+    font-family: monospace;
+    box-sizing: border-box;
+    color: greenyellow;
+}
+
+body, html {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+}
+
+a {
+    text-decoration: none;
+}
+
+#project-links {
+    position: fixed;
+    padding: 0;
+    right: 0;
+    top: 0;
+}
+
+
+/* Game list */
+
+ul {
+    padding: 0 0.5em;
+}
+
+li {
+    list-style-type: none;
+    position: relative;
+}
+
+li:hover {
+    opacity: 0.8;
+}
+
+.game-title {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.game-author:before {
+    content: " by ";
+    font-style: normal;
+}
+
+.game-author {
+    font-style: italic;
+}
+
+.game-description {
+    margin: 0.7em;
+}
+
+
+
+/* Game interaction */
+
+#cursor {
+    background-color: greenyellow;
+    animation: blinker 1s steps(1, end) infinite;
+}
+
+@keyframes blinker {
+    0% { opacity: 0; }
+    50% { opacity: 100; }
+    100% { opacity: 0; }
+}
+
+#text {
+    /* 4em for the input at bottom */
+    padding: 0 0 4em 0;
+    white-space: pre-wrap;
+}
+
+.line {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    animation: typing 4s steps(100, end);
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+[from="server"] {}
+
+[from="player"] {
+    color: grey;
+}
+
+#user-input, #user-input * {
+    margin: 0;
+    padding: 1em 0;
+    border: none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #0a0a0a;
+    color: greenyellow;
+}
+
+#user-input:focus {
+    border: none;
+    outline: none;
+}
+
+.replay-btn {
+    color: black;
+}
