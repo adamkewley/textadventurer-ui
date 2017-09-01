@@ -73,6 +73,10 @@ li:hover {
     100% { opacity: 0; }
 }
 
+#game-output {
+    max-width: 50em;
+}
+
 #text {
     /* 4em for the input at bottom */
     padding: 0 0 4em 0;

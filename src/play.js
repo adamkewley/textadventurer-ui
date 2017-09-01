@@ -1,4 +1,4 @@
-const TIME_TAKEN_PER_LETTER_WRITTEN_IN_MS = 10;
+const TIME_TAKEN_PER_LETTER_WRITTEN_IN_MS = 5;
 
 function findGetParameter(parameterName) {
     var result = null,
@@ -34,6 +34,7 @@ let charactersWaitingToBeWritten = [];
 setInterval(function() {
     if (charactersWaitingToBeWritten.length > 0) {
 	currentServerOutput.innerHTML += charactersWaitingToBeWritten.shift();
+	window.scrollTo(0, document.body.scrollHeight);
     }
 }, TIME_TAKEN_PER_LETTER_WRITTEN_IN_MS);
 
@@ -91,7 +92,7 @@ gameSocket.onclose = function(e) {
     gameAreaEl.appendChild(document.createElement("br"));
     gameAreaEl.appendChild(replayButton);
 };
+
 gameSocket.onmessage = function(event) {
     writeGameText(event.data);
-    document.body.scrollTop = document.body.scrollHeight;
 };
