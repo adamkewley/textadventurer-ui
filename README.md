@@ -7,7 +7,7 @@ Frontend for
 # Overview
 
 This project contains the frontend (html, javascript, css) code for
-[textadventurer](https://www.textadventurer.tk). It builds a bundle of
+[textadventurer](https://adamkewley.com/textadventurer/index.html). It builds a bundle of
 static assets that should be served up using a standard webserver such
 as Apache or nginx.
 
